@@ -50,7 +50,7 @@ const Manager = () => {
             <div className="my-container">
 
                 {/* Header */}
-                <p className='text-white text-2xl text-center mt-10 font-semibold'>Your Own Todo Creator</p>
+                <p className='text-white text-2xl text-center mt-10 font-semibold underline underline-offset-4'>Create your todos here</p>
 
                 {/* Form */}
                 <div className='text-black flex flex-col p-4 gap-8 items-center mt-5 w-[350px] sm:w-[600px] mx-auto'>
@@ -65,9 +65,9 @@ const Manager = () => {
 
                 {/* Display saved todos */}
                 <div className="todos mt-5">
-                    <h2 className='font-semibold text-2xl py-4 text-white text-center'>Your Todo List</h2>
-                    {todoArray.length === 0 && <div className='text-white text-center font-semibold'>Nothing here yet!!</div>}
-                    {todoArray.length != 0 && <table className="table-auto w-[370px] mx-auto rounded-md overflow-hidden sm:w-[600px] lg:w-[1000px]">
+                    <h2 className='font-semibold text-2xl py-4 text-white text-center underline underline-offset-4'>Your Todo List</h2>
+                    {todoArray.length === 0 && <div className='w-52 py-1 border border-purple-600 rounded-md mx-auto text-white text-center font-semibold bg-gradient-to-r from-violet-800 to-purple-600'>Well, Nothing's here yet!!</div>}
+                    {todoArray.length != 0 && <table className="table-auto w-[360px] mx-auto rounded-md overflow-hidden sm:w-[600px] lg:w-[1000px]">
                         <thead className='bg-sky-800 text-white'>
                             <tr>
                                 <th className='py-2'>Name</th>
