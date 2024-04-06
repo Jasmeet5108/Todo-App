@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 const Manager = () => {
 
-    // State to manage form data and todos array
     const [form, setForm] = useState({
         name: "",
         todo: "",
