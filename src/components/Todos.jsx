@@ -13,7 +13,6 @@ const Manager = () => {
 
     const [editing, setEditing] = useState(false);
 
-    // Effect to load todos from local storage when component mounts
     useEffect(() => {
         let todos = localStorage.getItem("todos");
         if (todos) {
@@ -21,12 +20,10 @@ const Manager = () => {
         }
     }, []);
 
-    // Function to save password to local storage and state
     const saveData = (e) => {
         e.preventDefault()
         setTodoArray([...todoArray, { ...form, id: uuidv4() }])
         localStorage.setItem("todos", JSON.stringify([...todoArray, { ...form, id: uuidv4() }]))
-        console.log([...todoArray, { ...form, id: uuidv4() }]);
         setForm({ name: "", todo: "" })
         setEditing(false)
     };
@@ -37,11 +34,10 @@ const Manager = () => {
         setTodoArray(todoArray.filter(item => item.id !== id))
     }
     const deleteData = (id) => {
-        setTodoArray(todoArray.filter(item => item.id !== id)) // Only return those objects from the array which do not have the same ID as mentioned
+        setTodoArray(todoArray.filter(item => item.id !== id))
         localStorage.setItem("todos", JSON.stringify(todoArray.filter(item => item.id !== id)))
     }
 
-    // Function to handle form input changes
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
     };
@@ -50,10 +46,8 @@ const Manager = () => {
         <>
             <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
-            {/* Main container */}
             <div className="my-container">
 
-                {/* Header */}
                 <p className='text-white text-2xl md:text-3xl text-center mt-10 font-semibold underline underline-offset-4'>Create Your Todos Here</p>
 
                 {/* Form */}
@@ -72,7 +66,7 @@ const Manager = () => {
                     </div>
                 </form>
 
-                {/* Display saved todos */}
+                {/* Todo List */}
                 <div className="todos mt-7 md:mt-10">
                     <h2 className='font-semibold text-2xl md:text-3xl py-4 text-white text-center underline underline-offset-4'>Your Todo List</h2>
                     {
