@@ -57,7 +57,7 @@ const Manager = () => {
 
                         <input name="todo" onChange={handleChange} value={form.todo} className='rounded-xl md:text-xl border border-indigo-500 w-full px-4 py-1 lg:h-[40px]' type="text" id='' placeholder='Enter task here' required />
 
-                        <button type='submit' className='w-fit font-semibold text-white flex justify-center md:text-xl items-center gap-2 bg-cyan-600 hover:bg-cyan-500 rounded-full px-8 py-2 border border-green-900'>
+                        <button type='submit' className='w-fit font-semibold text-white flex justify-center md:text-xl items-center gap-2 bg-emerald-500 hover:bg-emerald-600 rounded-full px-8 py-2 border border-green-900'>
                             Add Todo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#ffffff" fill="none">
                                 <path d="M12 4V20M20 12H4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
@@ -104,7 +104,7 @@ const Manager = () => {
                                             </td>
                                             <td className='py-2 text-center border border-black space-x-3 flex justify-center'>
                                                 {/* Edit */}
-                                                <button onClick={() => editData(item.id)} className="bg-emerald-500 hover:bg-emerald-700 text-white md:text-xl font-semibold py-1 px-2 md:px-3 rounded">
+                                                <button onClick={() => editData(item.id)} className="bg-sky-500 hover:bg-sky-700 text-white md:text-xl font-semibold py-1 px-2 md:px-3 rounded">
                                                     Edit
                                                 </button>
                                                 {/* Delete */}
